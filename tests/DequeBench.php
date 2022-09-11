@@ -5,7 +5,7 @@ use PhpBench\Attributes\Revs;
 
 class DequeBench
 {
-    const NUM_ITEMS = 1000;
+    const NUM_ITEMS = 5000;
     
     #[Revs(100)]
     #[Iterations(100)]

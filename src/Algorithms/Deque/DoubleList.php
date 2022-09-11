@@ -37,14 +37,10 @@ class DoubleList
     public function pop(): mixed
     {
         if (empty($this->back)) {
-            // take the first item from the front and remove the item
-            $return = reset($this->front);
-            unset($this->front[key($this->front)]);
-            return $return;
+            // take the first item from the front
+            return array_shift($this->front);
         }
-        $return = end($this->back);
-        unset($this->back[key($this->back)]);
-        return $return;
+        return array_pop($this->back);
     }
 
     /**
@@ -56,12 +52,8 @@ class DoubleList
     {
         if (empty($this->front)) {
             // take the last item from the back and remove the item
-            $return = reset($this->back);
-            unset($this->back[key($this->back)]);
-            return $return;
+            return array_shift($this->back);
         }
-        $return = end($this->front);
-        unset($this->front[key($this->front)]);
-        return $return;
+        return array_pop($this->front);
     }
 }
