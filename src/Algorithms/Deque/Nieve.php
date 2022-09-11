@@ -2,7 +2,8 @@
 
 namespace Withinboredom\Algorithms\Deque;
 
-class Nieve {
+class Nieve
+{
     private array $buffer = [];
 
     /**
@@ -12,7 +13,8 @@ class Nieve {
      *
      * @return void
      */
-    public function push( mixed $value ): void {
+    public function push(mixed $value): void
+    {
         array_push($this->buffer, $value);
     }
 
@@ -20,7 +22,8 @@ class Nieve {
      * Get from the end of the array
      * @return mixed
      */
-    public function pop(): mixed {
+    public function pop(): mixed
+    {
         return array_pop($this->buffer);
     }
 
@@ -28,7 +31,8 @@ class Nieve {
      * Get from the beginning of the array
      * @return mixed
      */
-    public function shift(): mixed {
+    public function shift(): mixed
+    {
         return array_shift($this->buffer);
     }
 
@@ -39,7 +43,8 @@ class Nieve {
      *
      * @return void
      */
-    public function unshift( mixed $value ): void {
+    public function unshift(mixed $value): void
+    {
         array_unshift($this->buffer, $value);
     }
 }
